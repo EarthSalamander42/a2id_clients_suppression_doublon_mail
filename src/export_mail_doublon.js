@@ -38,10 +38,10 @@ function writeEmailsToFile(emailMap, outputFile) {
 }
 
 // Répertoire contenant les fichiers Excel
-const directoryPath = path.join(__dirname, 'mail_export');
+const directoryPath = path.join(__dirname, '..', 'mail_export');
 
 // Fichier de sortie
-const outputFilePath = path.join(__dirname + '/mail_export', 'emails.txt');
+const outputFilePath = path.join(__dirname, '..', 'mail_export/mails.txt');
 
 // Extraire les e-mails et les écrire dans le fichier de sortie
 (async function() {
