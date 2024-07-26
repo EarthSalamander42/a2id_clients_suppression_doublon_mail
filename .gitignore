@@ -1,5 +1,5 @@
 node_modules/*
 package-lock.json
-/tel_completer
-/tel_convertir
-/mail_export
+/telephone
+mail_export/mails.txt
+mail_export/*.xlsx
