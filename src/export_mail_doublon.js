@@ -34,7 +34,7 @@ function writeEmailsToFile(emailMap, outputFile) {
 	});
 
 	fs.writeFileSync(outputFile, output);
-    console.log(`Emails extraits avec succès dans ${outputFile}`);
+    // console.log(`Emails extraits avec succès dans ${outputFile}`);
 }
 
 // Répertoire contenant les fichiers Excel
@@ -55,12 +55,12 @@ const outputFilePath = path.join(__dirname, '..', 'mail_export/mails.txt');
 
 		// Vérifier si le fichier est un fichier Excel
 		if (filePath.endsWith('.xlsx') || filePath.endsWith('.xls')) {
-			console.log(`Traitement du fichier : ${file}`);
+			// console.log(`Traitement du fichier : ${file}`);
 			const workbook = xlsx.readFile(filePath);
 
 			// Parcourir chaque feuille du fichier Excel
 			workbook.SheetNames.forEach(sheetName => {
-				console.log(`  Lecture de la feuille : ${sheetName}`);
+				// console.log(`  Lecture de la feuille : ${sheetName}`);
 				const worksheet = workbook.Sheets[sheetName];
 				
 				// Extraire les e-mails de la feuille
@@ -70,7 +70,7 @@ const outputFilePath = path.join(__dirname, '..', 'mail_export/mails.txt');
 				emailMap.set(sheetName, emails);
 			});
 		} else {
-			console.log(`  Le fichier ${file} n'est pas un fichier Excel, il est ignoré.`);
+			// console.log(`  Le fichier ${file} n'est pas un fichier Excel, il est ignoré.`);
 		}
 	}
 
