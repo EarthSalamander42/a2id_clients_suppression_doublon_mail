@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Répertoires
-const inputDir = path.join(__dirname, 'convertir');
-const outputDir = path.join(__dirname, 'completer');
-const errorLogDir = path.join(__dirname, 'logs'); // Répertoire pour les fichiers de log
+const inputDir = path.join(__dirname, '../', 'convertir');
+const outputDir = path.join(__dirname, '../', 'completer');
+const errorLogDir = path.join(__dirname, '../', 'logs'); // Répertoire pour les fichiers de log
 
 // Vérifie si les répertoires de sortie et de log existent, sinon les crée
 if (!fs.existsSync(outputDir)) {
@@ -227,7 +227,7 @@ async function processFile(filePath) {
     const workbook = xlsx.readFile(filePath, { cellStyles: true, cellText: true });
 
     for (const sheetName of workbook.SheetNames) {
-        console.log(`Traitement de la feuille "${sheetName}" dans ${filePath}`);
+        console.log(`\nTraitement de la feuille "${sheetName}" dans ${filePath}`);
         await processSheet(workbook, sheetName, filePath, sheetLogs);
     }
 
