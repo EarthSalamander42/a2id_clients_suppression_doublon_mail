@@ -11,9 +11,7 @@ Avant d'utiliser le script, assurez-vous d'avoir les éléments suivants :
 
 1. Installer Github Desktop.
 2. Cloner ce répertoire.
-3. Assurez-vous que votre fichier Excel contenant les adresses e-mail est dans le dossier ```mail_export```.
-4. Double-cliquez sur le raccourci nommé ```exporter.bat```
-5. Le script va extraire les adresses e-mail du fichier Excel et les enregistrer dans un nouveau fichier `mails.txt`.
-6. Les doublons seront automatiquement supprimés par feuille Excel dans le fichier `mails.txt`.
-
-Et voilà ! Vous avez maintenant extrait les adresses e-mail depuis votre fichier Excel et supprimé les doublons.
+3. Assurez-vous que votre fichier Excel est dans le dossier ```convertir```.
+4. Double-cliquez sur le raccourci nommé ```moulinette.bat```
+5. Le script va supprimer les lignes en doublons en se basant sur les numéros de téléphones du fichier Excel et les enregistrer dans un nouveau fichier excel dans le répertoire `completer`.
+6. Le script va également rajouter un 0 si manquant au début d'un numéro de téléphone, supprimer les espaces en trop, et supprimer les points.

@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Répertoires
-const inputDir = path.join(__dirname, '../telephone', 'convertir');
-const outputDir = path.join(__dirname, '../telephone', 'completer');
-const errorLogDir = path.join(__dirname, '../telephone', 'logs'); // Répertoire pour les fichiers de log
+const inputDir = path.join(__dirname, 'convertir');
+const outputDir = path.join(__dirname, 'completer');
+const errorLogDir = path.join(__dirname, 'logs'); // Répertoire pour les fichiers de log
 
 // Vérifie si les répertoires de sortie et de log existent, sinon les crée
 if (!fs.existsSync(outputDir)) {

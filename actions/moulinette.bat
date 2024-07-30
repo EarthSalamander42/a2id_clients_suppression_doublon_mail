@@ -1,4 +1,4 @@
 @echo off
 cd /d "%~dp0"
-node ../src/rajout_0_tel.js
+node ../src/moulinette.js
 pause
